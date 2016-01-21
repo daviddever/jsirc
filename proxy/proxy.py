@@ -8,6 +8,7 @@ socketio = SocketIO(app)
 if __name__ == '__main__':
     socketio.run(app)
 
-@socket.io.on('message')
+@socketio.on('message')
 def handle_message(message):
-    print('recieved message: ' + message)
+    print('received message: ' + message)
+

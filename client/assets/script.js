@@ -1,9 +1,7 @@
 function send() {
-    if (document.getElementById('sendbutton').clicked) {
-        var message = document.getElementById('textinput').value;
-        document.getElementById('textinput').value='';
-        socket.emit('ny event', {data: message});
-    };
+    var message = document.getElementById('textinput').value;
+    document.getElementById('textinput').value='';
+    socket.emit('my event', {data: message});
 };
 
 var socket = io('http://localhost:5000');
