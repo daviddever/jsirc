@@ -55,4 +55,4 @@ docs/_build/
 target/
 
 # Mac Stuff
-,DS_Store
+.DS_Store

@@ -1,12 +1,12 @@
+var socket = new WebSocket('ws://127.0.0.1:8000/echo');
+socket.onopen = function (event) {
+    socket.send('Socket is open!');
+};
+
 function send() {
     var message = document.getElementById('textinput').value;
     document.getElementById('textinput').value='';
-    socket.emit('my event', {data: message});
+    socket.send(message);
 };
 
-var socket = io('http://localhost:5000');
-socket.on('connect', function() {
-    socket.emit('my event', {data: 'I\'m connected!'});
-});
 
-send();
